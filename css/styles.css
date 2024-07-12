@@ -142,14 +142,13 @@ address {
     text-decoration: none;
     display: block;
     padding: 24px 0;
+    transition-property: color, duration;
 }
 
+.contacts-item:focus,
 .contacts-item:hover {
     color: #404BBF;
-}
-
-.contacts-item:focus {
-    color: #404bbf;
+    transition-duration: 200ms;
 }
 
 /* main */
@@ -238,6 +237,20 @@ img {
     width: calc((100% - 72px) / 4);
 }
 
+.second-item-wrap {
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+}
+
+.second-icon {
+    display: block;
+}
+
 .hero {
     background-color: #f4f4fd;
 }
@@ -295,6 +308,13 @@ img {
 .hero-text {
     padding: 32px 0;
     text-align: center;
+}
+
+.hero-icon {
+    display: flex;
+}
+
+.icons {
 }
 
 .portfolio-title {
