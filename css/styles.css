@@ -324,10 +324,16 @@ img {
     padding: 12px;
     border-radius: 50%;
     justify-content: center;
+    transition-property: bacground-color, dutation;
 }
 
 .icons {
     display: block;
+}
+
+.team .hero-icon-soc:hover {
+    background-color: #404bbf;
+    transition-duration: 200ms;
 }
 
 .portfolio-title {
@@ -361,7 +367,9 @@ img {
     color: #F4F4FD;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 100px 0 100px;
+    padding: 100px 0 100px 156px;
+    gap: 120px;
+    display: flex;
 }
 
 .footer-text {
@@ -377,4 +385,26 @@ footer .logo {
 
 footer .footer-span {
     color: #f4f4fd;
+}
+
+.container-socialmedia {
+    width: 208px;
+}
+
+.socialmedia {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+footer .hero-icon-soc {
+    transition: background-color, duration;
+}
+
+footer .hero-icon-soc:hover {
+    background-color: #31d0aa;
+    transition-duration: 200ms;
 }
