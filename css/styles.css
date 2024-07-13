@@ -41,6 +41,9 @@ footer .logo {
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
 
 header {
@@ -60,6 +63,7 @@ header {
 }
 
 .header-logo {
+    color: #404bbf;
     padding: 24px 0;
     margin-right: 76px;
 }
@@ -84,7 +88,7 @@ header {
     padding: 24px 0;
     display: block;
     position: relative;
-    transition-property: color, duration;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav::after {
@@ -93,8 +97,8 @@ header {
     border-radius: 2px;
     width: 100%;
     height: 4px;
-    background-color: transparent;
-    bottom: 0;
+    background-color: #404bbf;;
+    bottom: -1px;
     left: 0;
     transition-property: background-color, duration;
     
@@ -142,7 +146,7 @@ address {
     text-decoration: none;
     display: block;
     padding: 24px 0;
-    transition-property: color, duration;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .contacts-item:focus,
@@ -167,7 +171,10 @@ address {
         rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
+    max-width: 1440px;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 188px 0;
 }
 
@@ -198,7 +205,7 @@ address {
     border: none;
     border-radius: 4px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    transition-property: background-color, duration;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover {
@@ -242,6 +249,10 @@ img {
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 100%;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 24px 100px;
     margin-bottom: 8px;
 }
@@ -305,35 +316,47 @@ img {
 }
 
 .hero-text {
-    padding: 32px 16px;
+    padding: 32px 0;
     text-align: center;
 }
 
 .hero-icon {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
     margin-top: 8px;
+}
+
+.link-icons {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-icon-soc {
     width: 40px;
     height: 40px;
-    background-color: #4d5ae5;
     fill: #F4F4FD;
-    padding: 12px;
     border-radius: 50%;
     justify-content: center;
-    transition-property: bacground-color, dutation;
+    transition-property: bacground-color, duation;
 }
 
 .icons {
     display: block;
+    fill: #f4f4fd;
 }
 
-.team .hero-icon-soc:hover {
+.link-icons:hover,
+.link-icons:focus {
     background-color: #404bbf;
-    transition-duration: 200ms;
+    transition-duration: 250ms;
 }
 
 .portfolio-title {
@@ -360,6 +383,14 @@ img {
 
 .portfolio-item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition-duration: 250ms;
 }
 
 .portfolio-image {
@@ -368,16 +399,21 @@ img {
 }
 
 .overlay {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #4d5ae5;
-    padding: 40px 32px 0 32px;
+    padding: 40px 32px;
 
     transform: translatey(100%);
-    transition-property: transform, duration;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .overlay {
@@ -385,19 +421,16 @@ img {
     transition-duration: 250ms;
 }
 
-.overlay p {
-    color: #f4f4fd;
-}
-
 /* footer start */
 
 .section-footer {
+    display: flex;
+    align-items: baseline;
     background: #2e2f42;
     color: #F4F4FD;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 100px 0 100px 156px;
-    gap: 120px;
     display: flex;
 }
 
@@ -416,6 +449,10 @@ footer .footer-span {
     color: #f4f4fd;
 }
 
+.container-webstudio {
+    margin-right: 120px;
+}
+
 .container-socialmedia {
     width: 208px;
 }
@@ -425,15 +462,35 @@ footer .footer-span {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 16px;
 }
 
+.hero-icon {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-link-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
 footer .hero-icon-soc {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    
+
     transition: background-color, duration;
+
 }
 
 footer .hero-icon-soc:hover {
     background-color: #31d0aa;
-    transition-duration: 200ms;
+    transition-duration: 250ms;
 }
