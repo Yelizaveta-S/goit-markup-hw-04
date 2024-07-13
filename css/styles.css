@@ -322,9 +322,9 @@ img {
 
 .hero-icon {
     width: 100%;
+    gap: 24px;
     display: flex;
     justify-content: center;
-    gap: 24px;
     margin-top: 8px;
 }
 
@@ -334,7 +334,6 @@ img {
     background-color: #4d5ae5;
     border-radius: 50%;
     padding: 12px;
-    gap: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -478,17 +477,15 @@ footer .footer-span {
     justify-content: center;
     width: 100%;
     height: 100%;
-    
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer .hero-icon-soc {
     width: 40px;
     height: 40px;
     background-color: #4d5ae5;
-    
-
-    transition: background-color, duration;
-
 }
 
 footer .hero-icon-soc:hover {
