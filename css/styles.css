@@ -344,9 +344,6 @@ img {
     width: 40px;
     height: 40px;
     fill: #F4F4FD;
-    gap: 24px;
-    border-radius: 50%;
-    justify-content: center;
 }
 
 .icons {
@@ -467,6 +464,10 @@ footer .footer-span {
     margin-bottom: 16px;
 }
 
+.footer-item-icon {
+    gap: 16px;
+}
+
 .footer-link-icons {
     display: flex;
     align-items: center;
@@ -476,12 +477,6 @@ footer .footer-span {
     background-color: #4d5ae5;
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-footer .hero-icon-soc {
-    width: 40px;
-    height: 40px;
-    background-color: #4d5ae5;
 }
 
 .footer-link-icons:hover,
