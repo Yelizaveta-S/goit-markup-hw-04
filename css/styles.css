@@ -422,14 +422,13 @@ img {
 
 /* footer start */
 
-.section-footer {
-    display: flex;
-    align-items: baseline;
+footer {
     background: #2e2f42;
-    color: #F4F4FD;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     padding: 100px 0 100px 156px;
+}
+
+.section-footer {
+    align-items: baseline;
     display: flex;
 }
 
